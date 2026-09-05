@@ -7,6 +7,11 @@
 
 > **High-performance Mexican CFDI 4.0 / 3.3 fiscal auditor, Anexo 20 math validator, and official SAT Article 69-B (EFOS) sentinel.** Zero external runtime dependencies. 100% standard library Python.
 
+
+> 🌐 **Fiscal Ecosystem — Looking for an in-browser interactive Web UI with Excel export?**  
+> Check out **[CFDI Sentinel](https://github.com/iamhuitron/cfdi-sentinel)**: Our 100% client-side Next.js / React 19 web application for drag-and-drop XML/ZIP auditing, visual KPI dashboards, and DIOT calculation with zero server exposure.
+
+
 Created by **[Ian Miguel Delgado Huitron](https://portfolio-pink-five-jaih91sunw.vercel.app/)** (@iamhuitron)  
 *UNAM Informatics undergraduate & Fiscal Accounting Specialist.*
 
