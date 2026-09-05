@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/4" xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital"
+    Version="4.0" Serie="F" Folio="999" Fecha="2026-03-01T12:00:00"
+    SubTotal="50000.00" Descuento="0.00" Total="58000.00" Moneda="MXN" TipoDeComprobante="I">
+    <cfdi:Emisor Rfc="XEF980101XYZ" Nombre="DISTRIBUIDORA COMERCIAL FANTASMA SA DE CV" RegimenFiscal="601"/>
+    <cfdi:Receptor Rfc="CTE900202ABC" Nombre="CLIENTE EJEMPLAR SA DE CV" DomicilioFiscalReceptor="06000" RegimenFiscalReceptor="601" UsoCFDI="G03"/>
+    <cfdi:Conceptos>
+        <cfdi:Concepto ClaveProdServ="84111500" Cantidad="1" ValorUnitario="50000.00" Importe="50000.00" Descripcion="Asesoría fantasma"/>
+    </cfdi:Conceptos>
+    <cfdi:Impuestos TotalImpuestosTrasladados="8000.00">
+        <cfdi:Traslados>
+            <cfdi:Traslado Base="50000.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="8000.00"/>
+        </cfdi:Traslados>
+    </cfdi:Impuestos>
+</cfdi:Comprobante>

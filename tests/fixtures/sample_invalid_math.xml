@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/4"
+    Version="4.0" SubTotal="1000.00" Descuento="0.00" Total="9999.00" Moneda="MXN" TipoDeComprobante="I">
+    <cfdi:Emisor Rfc="RFC_INVALIDO" Nombre="EMPRESA MAL CONFIGURADA"/>
+    <cfdi:Receptor Rfc="OTRO_MALO" Nombre="RECEPTOR MAL"/>
+</cfdi:Comprobante>

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cfdi-sat-engine"
+version = "1.0.0"
+authors = [
+  { name="Ian Miguel Delgado Huitron", email="ianhuitron0687@gmail.com" },
+]
+description = "High-performance Mexican CFDI 4.0/3.3 fiscal audit, XML validation & SAT Art. 69-B (EFOS) sentinel."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Office/Business :: Financial :: Accounting",
+]
+
+[project.scripts]
+cfdi-engine = "cfdi_engine.cli:main"
