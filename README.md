@@ -1,19 +1,23 @@
-# 🛡️ CFDI SAT Engine
+# CFDI SAT Engine
 
-[![CI](https://github.com/iamhuitron/cfdi-sat-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/iamhuitron/cfdi-sat-engine/actions)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](https://opensource.org/licenses/MIT)
-[![SAT CFDI 4.0](https://img.shields.io/badge/CFDI-4.0%20%2F%203.3-orange.svg)](http://omawww.sat.gob.mx/tramitesyservicios/Paginas/anexo_20.htm)
+<p align="left">
+  <strong>High-Throughput Mexican CFDI 4.0 / 3.3 Fiscal Auditor & SAT Art. 69-B (EFOS) Sentinel</strong><br>
+  Open-Source Engine by <a href="https://github.com/iamhuitron"><strong>Ian Miguel Delgado Huitrón</strong></a> · Co-Founder at <a href="https://github.com/Xaol-Studio"><strong>@Xaol-Studio</strong></a>
+</p>
+
+<p align="left">
+  <a href="https://github.com/iamhuitron/cfdi-sat-engine/actions/workflows/ci.yml"><img src="https://img.shields.io/badge/CI-Passing-059669?style=flat-square&logo=githubactions&logoColor=white" alt="CI" /></a>
+  <a href="https://github.com/iamhuitron"><img src="https://img.shields.io/badge/Author-@iamhuitron-1e293b?style=flat-square&logo=github&logoColor=white" alt="Author" /></a>
+  <a href="https://github.com/Xaol-Studio"><img src="https://img.shields.io/badge/Studio-@Xaol--Studio-059669?style=flat-square&logo=github&logoColor=white" alt="Studio" /></a>
+  <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 3.10+" />
+  <img src="https://img.shields.io/badge/Dependencies-Zero%20External%20(Stdlib)-blue?style=flat-square" alt="Dependencies" />
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-emerald?style=flat-square" alt="License" /></a>
+</p>
 
 > **High-performance Mexican CFDI 4.0 / 3.3 fiscal auditor, Anexo 20 math validator, and official SAT Article 69-B (EFOS) sentinel.** Zero external runtime dependencies. 100% standard library Python.
 
-
 > 🌐 **Fiscal Ecosystem — Looking for an in-browser interactive Web UI with Excel export?**  
-> Check out **[CFDI Sentinel](https://github.com/iamhuitron/cfdi-sentinel)**: Our 100% client-side Next.js / React 19 web application for drag-and-drop XML/ZIP auditing, visual KPI dashboards, and DIOT calculation with zero server exposure.
-
-
-Created by **[Ian Miguel Delgado Huitron](https://portfolio-pink-five-jaih91sunw.vercel.app/)** (@iamhuitron)  
-*UNAM Informatics undergraduate & Fiscal Accounting Specialist.*
+> Check out **[CFDI Sentinel](https://github.com/iamhuitron/cfdi-sentinel)**: Our 100% client-side Next.js / React 19 web application for drag-and-drop XML/ZIP auditing, visual KPI dashboards, and DIOT calculation with zero server exposure. Demo: [xaol-website.vercel.app/demo/sat-sentinel.html](https://xaol-website.vercel.app/demo/sat-sentinel.html)
 
 ---
 
