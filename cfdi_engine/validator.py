@@ -38,6 +38,12 @@ def validate_rfc(rfc: str) -> bool:
         return bool(RFC_FISICA_REGEX.match(rfc_clean))
     return False
 
+def validate_uuid(uuid_str: str) -> bool:
+    """Validates UUID format (8-4-4-4-12 hex) according to SAT TimbreFiscalDigital specification."""
+    if not uuid_str:
+        return False
+    return bool(UUID_REGEX.match(uuid_str.strip()))
+
 def validate_cfdi_math(cfdi: Dict[str, Any], tolerance: Decimal = Decimal("0.05")) -> ValidationResult:
     issues = []
     discrepancies = {}
