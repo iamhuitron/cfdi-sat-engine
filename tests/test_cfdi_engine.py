@@ -7,7 +7,7 @@ from pathlib import Path
 from decimal import Decimal
 
 from cfdi_engine.parser import parse_cfdi_xml, CFDIParseError
-from cfdi_engine.validator import validate_rfc, validate_cfdi_math
+from cfdi_engine.validator import validate_rfc, validate_cfdi_math, validate_uuid
 from cfdi_engine.sat_blacklist import EFOSSentinel
 
 FIXTURES_DIR = Path(__file__).parent / "fixtures"
@@ -30,6 +30,13 @@ class TestCFDIEngine(unittest.TestCase):
         self.assertFalse(validate_rfc("INVALID_RFC"))
         self.assertFalse(validate_rfc("12345"))
         self.assertFalse(validate_rfc(""))
+
+    def test_uuid_validation(self):
+        self.assertTrue(validate_uuid("9B8A7C6D-5E4F-4A3B-2C1D-0E9F8A7B6C5D"))
+        self.assertTrue(validate_uuid("12345678-1234-1234-1234-123456789abc"))
+        self.assertFalse(validate_uuid("invalid-uuid-string"))
+        self.assertFalse(validate_uuid(""))
+        self.assertFalse(validate_uuid("12345678-1234-1234-1234"))
 
     def test_parse_valid_cfdi40(self):
         valid_xml = FIXTURES_DIR / "sample_valid.xml"
