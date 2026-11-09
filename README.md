@@ -6,12 +6,16 @@
 </p>
 
 <p align="left">
-  <a href="https://github.com/iamhuitron/cfdi-sat-engine/actions/workflows/ci.yml"><img src="https://img.shields.io/badge/CI-Passing-059669?style=flat-square&logo=githubactions&logoColor=white" alt="CI" /></a>
-  <a href="https://github.com/iamhuitron"><img src="https://img.shields.io/badge/Author-@iamhuitron-1e293b?style=flat-square&logo=github&logoColor=white" alt="Author" /></a>
-  <a href="https://github.com/Xaol-Studio"><img src="https://img.shields.io/badge/Studio-@Xaol--Studio-059669?style=flat-square&logo=github&logoColor=white" alt="Studio" /></a>
-  <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 3.10+" />
-  <img src="https://img.shields.io/badge/Dependencies-Zero%20External%20(Stdlib)-blue?style=flat-square" alt="Dependencies" />
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-emerald?style=flat-square" alt="License" /></a>
+  <a href="https://github.com/iamhuitron"><img src="https://img.shields.io/badge/AUTHOR-@iamhuitron-1D1A16?style=for-the-badge&logo=github&logoColor=D4B87A&labelColor=141210" alt="Author" /></a>
+  <a href="https://github.com/Xaol-Studio"><img src="https://img.shields.io/badge/STUDIO-@Xaol--Studio-B89758?style=for-the-badge&logo=github&logoColor=FAF8F5&labelColor=141210" alt="Studio" /></a>
+</p>
+
+<p align="left">
+  <a href="https://github.com/iamhuitron/cfdi-sat-engine/actions/workflows/ci.yml"><img src="https://img.shields.io/badge/CI-Passing-1B3B2B?style=flat-square&logo=githubactions&logoColor=D4B87A&labelColor=141210" alt="CI" /></a>
+  <img src="https://img.shields.io/badge/Python-3.10+-1D1A16?style=flat-square&logo=python&logoColor=D4B87A&labelColor=141210" alt="Python 3.10+" />
+  <img src="https://img.shields.io/badge/Dependencies-Zero_External_(Stdlib)-1D1A16?style=flat-square&labelColor=141210&logoColor=D4B87A" alt="Dependencies" />
+  <img src="https://img.shields.io/badge/SAT_Audit-Anexo_20_&_Art._69B-611624?style=flat-square&labelColor=141210&logoColor=FAF8F5" alt="SAT Audit" />
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-1D1A16?style=flat-square&labelColor=141210&logoColor=D4B87A" alt="License" /></a>
 </p>
 
 > **High-performance Mexican CFDI 4.0 / 3.3 fiscal auditor, Anexo 20 math validator, and official SAT Article 69-B (EFOS) sentinel.** Zero external runtime dependencies. 100% standard library Python.
@@ -34,27 +38,13 @@
 
 ## 🏗️ Architecture
 
-```
-                      ┌────────────────────────────────┐
-                      │    CFDI 4.0 / 3.3 XML File     │
-                      └───────────────┬────────────────┘
-                                      │
-                                      ▼
-                        [ cfdi_engine.parser ]
-                       (Namespace-Free AST Parser)
-                                      │
-                   ┌──────────────────┴──────────────────┐
-                   ▼                                     ▼
-        [ cfdi_engine.validator ]             [ cfdi_engine.sat_blacklist ]
-        - Anexo 20 Math Check                 - SAT Art. 69-B Hash Map O(1)
-        - RFC Syntax Validation               - Situación: Definitivo/Presunto
-        - UUID RFC-4122 Check                 - Oficio DOF & Publicación
-                   │                                     │
-                   └──────────────────┬──────────────────┘
-                                      ▼
-                        [ cfdi_engine.reporter ]
-                       - CLI Visual Audit Report
-                       - Structured JSON Export
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#141210', 'primaryTextColor': '#FAF8F5', 'primaryBorderColor': '#B89758', 'lineColor': '#B89758', 'secondaryColor': '#1D1A16', 'tertiaryColor': '#0D0C0A', 'mainBkg': '#141210', 'nodeBorder': '#B89758', 'clusterBkg': '#0D0C0A', 'clusterBorder': '#262420', 'titleColor': '#D4B87A', 'edgeLabelBackground': '#141210', 'fontFamily': 'JetBrains Mono, Plus Jakarta Sans, sans-serif' }}}%%
+flowchart TD
+    A["CFDI 4.0 / 3.3 XML Input"] --> B["cfdi_engine.parser<br/>(Namespace-Free AST Parser)"]
+    B --> C["cfdi_engine.validator<br/>Anexo 20 Decimal Math · RFC Regex · UUID RFC-4122"]
+    B --> D["cfdi_engine.sat_blacklist<br/>O(1) Hash Map · Art. 69-B (Definitivo / Presunto)"]
+    C & D --> E["cfdi_engine.reporter<br/>CLI Dictamen Fiscal & Structured JSON Export"]
 ```
 
 ---
